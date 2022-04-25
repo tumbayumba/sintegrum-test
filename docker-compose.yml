@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  php-apache-environment:
+    container_name: php8.1-apache-test
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./app:/var/www/html/
+      - ./apache/sites-enabled/000-default.conf:/etc/apache2/sites-enabled/000-default.conf
+    ports:
+      - 8000:80

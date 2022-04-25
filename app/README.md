@@ -12,60 +12,31 @@ features to your application.
 DIRECTORY STRUCTURE
 -------------------
 
-      commands/           contains console commands (controllers)
-      config/             contains application configurations
-      controllers/        contains Web controller classes
-      models/             contains model classes
-      runtime/            contains files generated during runtime
-      vendor/             contains dependent 3rd-party packages
-      views/              contains view files for the Web application
-      web/                contains the entry script and Web resources
+      common/                             Компоненты общего уровня приложения
+          components/
+              parsers/
+                  TicketParser.php        Производит вычисления маршрутов
+              rest/
+                  RestModule.php          Предзагрузка модуля для REST API(формат входящих и данных ответа) 
+          controllers/
+              BaseRestController.php      Базовый контроллер. В нем реализована BearerToken аутентификация на базе модели /app/models/User 
+      
+      modules/                            Содержит каталоги версионности API
+          v1/
+              controllers/
+                  FlightController.php    Контроллер, в котором реализован один экшн actionEndpoint
+          v2/
 
+REST API METHODS
+-------------------
+POST /v1/flight/endpoint  -  метод получения конечной точки назначения с возможной точкой разрыва
 
+BearerToken = gblZYh5QglOCKwy2IjOyxPaRVqBFbOmX
+Accept: {application/xml | application/json}
 
-REQUIREMENTS
-------------
+Postman collection:
+/app/sintegrum-test.postman_collection.json
 
-The minimum requirement by this application template that your Web server supports PHP 5.4.0.
-
-
-INSTALLATION
-------------
-
-If you do not have [Composer](http://getcomposer.org/), you may install it by following the instructions
-at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
-
-You can then install this application template using the following command:
-
-~~~
-composer create-project --prefer-dist --stability=dev samdark/yii2-minimal path/to/your/project
-~~~
-
-Now you should be able to access the application through the following URL, assuming your server webroot is pointed to
-`project/web` directory.
-
-~~~
-http://localhost/
-~~~
-
-
-CONFIGURATION
--------------
-
-### Database
-
-Edit the file `config/db.php` with real data, for example:
-
-```php
-return [
-    'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=yii2minimal',
-    'username' => 'root',
-    'password' => '1234',
-    'charset' => 'utf8',
-];
-```
-
-**NOTES:**
-- Yii won't create the database for you, this has to be done manually before you can access it.
-- Check and edit the other files in the `config/` directory to customize your application as required.
+Body data:
+/app/routes_endpoint.xml
+/app/routes_endpoint_with_breakpoint.xml

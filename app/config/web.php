@@ -11,9 +11,13 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
     ],
     'components' => [
-            'request' => [
+        'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'Gw4A-nNRYdegSu8gB3_2NDFwSFm2TfVg',
+            'parsers' => [
+                'application/json' => 'yii\web\JsonParser',
+                'application/xml' => 'app\common\components\parsers\XmlParser',
+            ]
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -35,14 +39,21 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
-        /*
+
         'urlManager' => [
             'enablePrettyUrl' => true,
-            'showScriptName' => false,
+            //'enableStrictParsing' => true,
+            //'showScriptName' => false,
             'rules' => [
+                ['class' => 'yii\rest\UrlRule', 'controller' => 'v1/flight', 'only' => ['endpoint'],],
             ],
         ],
-        */
+
+    ],
+    'modules' => [
+        'v1' => [
+            'class' => 'app\modules\v1\Module',
+        ],
     ],
     'params' => $params,
 ];
