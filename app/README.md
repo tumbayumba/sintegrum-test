@@ -29,6 +29,7 @@ DIRECTORY STRUCTURE
 
 REST API METHODS
 -------------------
+http://sintegrum-test.sr-studio.com.ua
 POST /v1/flight/endpoint  -  метод получения конечной точки назначения с возможной точкой разрыва
 
 BearerToken = gblZYh5QglOCKwy2IjOyxPaRVqBFbOmX
@@ -40,3 +41,6 @@ Postman collection:
 Body data:
 /app/routes_endpoint.xml
 /app/routes_endpoint_with_breakpoint.xml
+
+GitHub
+https://github.com/tumbayumba/sintegrum-test

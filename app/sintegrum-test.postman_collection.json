@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "73ca8844-80b3-4f55-8751-ae590d4861f4",
+		"name": "sintegrum-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/v1/flight/endpoint",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "gblZYh5QglOCKwy2IjOyxPaRVqBFbOmX",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<Ticket No=\"057-6776453695\" Status=\"Issued\" Type=\"Electron\" SignInBooking=\"097956\" SignInTicketing=\"54\" ReissueNo=\"\" XP=\"\">\r\n    <TicketHeader>\r\n        <History Ticketing=\"2015-03-26\" Void=\"\" Refund=\"\" Reissue=\"\"/>\r\n        <Created>2015-03-26 10:22:00</Created>\r\n        <Modified/>\r\n        <ModifiedBy/>\r\n        <ClientCompanyName/>\r\n        <ClientNumber/>\r\n        <DistrubutorName/>\r\n        <DistributorNumber/>\r\n        <RecordLocator>4LTHC0</RecordLocator>\r\n        <Subagent/>\r\n        <Interline>N</Interline>\r\n        <TicketStatus>OK</TicketStatus>\r\n        <TKTcoupons/>\r\n        <GlobalCouponStatus/>\r\n        <TermID>BC8A62</TermID>\r\n        <MIRdev>ADB08B</MIRdev>\r\n        <TransBeforeTKT>008</TransBeforeTKT>\r\n        <AutoPrice>N</AutoPrice>\r\n        <BookedDirectly>N</BookedDirectly>\r\n        <FrequentFlyer/>\r\n        <FareCalc>IEV AF X/PAR AF X/MAD AF PMI 81.44AF X/MAD AF X/PAR AF IEV 82 .94 NUC164.38END ROE1.0 XT 404YK644FR733QX747JD46OG219QV2736Y R</FareCalc>\r\n        <Routing>KBP-CDG-MAD-PMI-MAD-CDG-KBP</Routing>\r\n        <ItineraryIndicator>I</ItineraryIndicator>\r\n        <PNRCreationDate>2015-03-26</PNRCreationDate>\r\n        <OfficeID Booking=\"7E53\" TR=\"\" Ticketing=\"7E53\"/>\r\n        <Contacts>KBPT*380445857777</Contacts>\r\n        <TktAgentTitle/>\r\n        <TktOfficeTitle>7E53</TktOfficeTitle>\r\n        <BookingOfficeTitle>7E53</BookingOfficeTitle>\r\n        <IATA>72324464</IATA>\r\n        <ValidAirlineName>AIR FRANCE</ValidAirlineName>\r\n        <ValidatingCarrier>AF</ValidatingCarrier>\r\n        <Rate Currency=\"USD\" Value=\"164.00\"/>\r\n        <RateUAH>3895.00</RateUAH>\r\n        <ConvertationRate>23.7500</ConvertationRate>\r\n        <TourCode/>\r\n        <Comission>1.00A</Comission>\r\n        <CommisAmt Curr=\"UAH\" Value=\"1.00\"/>\r\n        <FP>CASH</FP>\r\n        <CreditCard/>\r\n        <AirRecLoc>1A-3KU6O7</AirRecLoc>\r\n        <Endorsement>REFUND/CHANGE /RESTRICTIONS APPLY </Endorsement>\r\n        <Amount>9567.00</Amount>\r\n        <ServiceFee Main=\"0.00\" VAT=\"0.00\"/>\r\n        <Discount>0.00</Discount>\r\n        <ClientToPay>0.00</ClientToPay>\r\n        <AirlinePayTotal>9566,00</AirlinePayTotal>\r\n        <NetEarnedExclTaxes>1,00</NetEarnedExclTaxes>\r\n        <AgentCountry>UA </AgentCountry>\r\n        <Remarks>\r\n            <Remark/>\r\n            <Remark1>#SWFT#PI#P1/UA/EP935495/09SEP88/ADT/F/# </Remark1>\r\n            <Remark2/>\r\n            <Remark3/>\r\n        </Remarks>\r\n        <Taxes Curr=\"UAH\" Value=\"5672.00\">\r\n            <Tax Curr=\"UAH\" Value=\"644.00\" TC=\"FR\" NC=\"\"/>\r\n            <Tax Curr=\"UAH\" Value=\"747.00\" TC=\"JD\" NC=\"\"/>\r\n            <Tax Curr=\"UAH\" Value=\"46.00\" TC=\"OG\" NC=\"\"/>\r\n            <Tax Curr=\"UAH\" Value=\"219.00\" TC=\"QV\" NC=\"\"/>\r\n            <Tax Curr=\"UAH\" Value=\"733.00\" TC=\"QX\" NC=\"\"/>\r\n            <Tax Curr=\"UAH\" Value=\"95.00\" TC=\"UA\" NC=\"\"/>\r\n            <Tax Curr=\"UAH\" Value=\"48.00\" TC=\"UD\" NC=\"\"/>\r\n            <Tax Curr=\"UAH\" Value=\"404.00\" TC=\"YK\" NC=\"\"/>\r\n            <Tax Curr=\"UAH\" Value=\"2736.00\" TC=\"YR\" NC=\"\"/>\r\n        </Taxes>\r\n        <CarrierTKTFees/>\r\n    </TicketHeader>\r\n    <NE No=\"1\" LastName=\"DONCHENKO\" FirstName=\"INNAMRS\" Title=\"\" text=\"ADT\"/>\r\n    <AirSegments>\r\n        <AirSegment No=\"01\" Class=\"R\">\r\n            <ServicingCarrier>AF</ServicingCarrier>\r\n            <ServicingCarrierName>AIR FRANCE</ServicingCarrierName>\r\n            <OpratingCarrierName/>\r\n            <FlightNo>1753</FlightNo>\r\n            <SeatNumber/>\r\n            <FlightDurationTime>0315</FlightDurationTime>\r\n            <GeographicalMileage>01245</GeographicalMileage>\r\n            <Meal>MS</Meal>\r\n            <MealSSR/>\r\n            <AirClass>R</AirClass>\r\n            <Departure Date=\"2015-03-29\" Time=\"15:15:00\"/>\r\n            <Arrival Date=\"2015-03-29\" Time=\"17:30:00\"/>\r\n            <Board City=\"KIEV/BORYSPIL\" Point=\"KBP\" Terminal=\"\"/>\r\n            <Off City=\"PARIS/CHARLES\" Point=\"CDG\" Terminal=\"\"/>\r\n            <FareBasis>RSR3UA</FareBasis>\r\n            <BaggageAllowance>1PC</BaggageAllowance>\r\n            <Equipment>319</Equipment>\r\n            <WCHR/>\r\n            <ACRecLoc/>\r\n        </AirSegment>\r\n        <AirSegment No=\"02\" Class=\"R\">\r\n            <ServicingCarrier>AF</ServicingCarrier>\r\n            <ServicingCarrierName>AIR FRANCE</ServicingCarrierName>\r\n            <OpratingCarrierName/>\r\n            <FlightNo>1300</FlightNo>\r\n            <SeatNumber/>\r\n            <FlightDurationTime>0205</FlightDurationTime>\r\n            <GeographicalMileage>00660</GeographicalMileage>\r\n            <Meal/>\r\n            <MealSSR/>\r\n            <AirClass>R</AirClass>\r\n            <Departure Date=\"2015-03-30\" Time=\"09:45:00\"/>\r\n            <Arrival Date=\"2015-03-30\" Time=\"11:50:00\"/>\r\n            <Board City=\"LILLE\" Point=\"CDG\" Terminal=\"2F\"/>\r\n            <Off City=\"MADRID/MADRID\" Point=\"MAD\" Terminal=\"\"/>\r\n            <FareBasis>RSR3UA</FareBasis>\r\n            <BaggageAllowance>1PC</BaggageAllowance>\r\n            <Equipment>321</Equipment>\r\n            <WCHR/>\r\n            <ACRecLoc/>\r\n        </AirSegment>\r\n        <AirSegment No=\"03\" Class=\"R\">\r\n            <ServicingCarrier>AF</ServicingCarrier>\r\n            <ServicingCarrierName>AIR FRANCE</ServicingCarrierName>\r\n            <OpratingCarrierName>AIR EUROPA</OpratingCarrierName>\r\n            <FlightNo>4806</FlightNo>\r\n            <SeatNumber/>\r\n            <FlightDurationTime>0120</FlightDurationTime>\r\n            <GeographicalMileage>00340</GeographicalMileage>\r\n            <Meal>G</Meal>\r\n            <MealSSR/>\r\n            <AirClass>R</AirClass>\r\n            <Departure Date=\"2015-03-30\" Time=\"13:30:00\"/>\r\n            <Arrival Date=\"2015-03-30\" Time=\"14:50:00\"/>\r\n            <Board City=\"MADRID/MADRID\" Point=\"MAD\" Terminal=\"2\"/>\r\n            <Off City=\"PALMA DE MALL\" Point=\"PMI\" Terminal=\"\"/>\r\n            <FareBasis>RSR3UA</FareBasis>\r\n            <BaggageAllowance>1PC</BaggageAllowance>\r\n            <Equipment>738</Equipment>\r\n            <WCHR/>\r\n            <ACRecLoc/>\r\n        </AirSegment>\r\n        <AirSegment No=\"04\" Class=\"R\">\r\n            <ServicingCarrier>AF</ServicingCarrier>\r\n            <ServicingCarrierName>AIR FRANCE</ServicingCarrierName>\r\n            <OpratingCarrierName>AIR EUROPA</OpratingCarrierName>\r\n            <FlightNo>4805</FlightNo>\r\n            <SeatNumber/>\r\n            <FlightDurationTime>0130</FlightDurationTime>\r\n            <GeographicalMileage>00340</GeographicalMileage>\r\n            <Meal>G</Meal>\r\n            <MealSSR/>\r\n            <AirClass>R</AirClass>\r\n            <Departure Date=\"2015-04-22\" Time=\"09:55:00\"/>\r\n            <Arrival Date=\"2015-04-22\" Time=\"11:25:00\"/>\r\n            <Board City=\"PALMA DE MALL\" Point=\"PMI\" Terminal=\"\"/>\r\n            <Off City=\"MADRID/MADRID\" Point=\"MAD\" Terminal=\"\"/>\r\n            <FareBasis>RSR4UA</FareBasis>\r\n            <BaggageAllowance>1PC</BaggageAllowance>\r\n            <Equipment>738</Equipment>\r\n            <WCHR/>\r\n            <ACRecLoc/>\r\n        </AirSegment>\r\n        <AirSegment No=\"05\" Class=\"R\">\r\n            <ServicingCarrier>AF</ServicingCarrier>\r\n            <ServicingCarrierName>AIR FRANCE</ServicingCarrierName>\r\n            <OpratingCarrierName/>\r\n            <FlightNo>1301</FlightNo>\r\n            <SeatNumber/>\r\n            <FlightDurationTime>0205</FlightDurationTime>\r\n            <GeographicalMileage>00660</GeographicalMileage>\r\n            <Meal>S</Meal>\r\n            <MealSSR/>\r\n            <AirClass>R</AirClass>\r\n            <Departure Date=\"2015-04-22\" Time=\"12:45:00\"/>\r\n            <Arrival Date=\"2015-04-22\" Time=\"14:50:00\"/>\r\n            <Board City=\"MADRID/MADRID\" Point=\"MAD\" Terminal=\"2\"/>\r\n            <Off City=\"PARIS/CHARLES\" Point=\"CDG\" Terminal=\"\"/>\r\n            <FareBasis>RSR4UA</FareBasis>\r\n            <BaggageAllowance>1PC</BaggageAllowance>\r\n            <Equipment>321</Equipment>\r\n            <WCHR/>\r\n            <ACRecLoc/>\r\n        </AirSegment>\r\n        <AirSegment No=\"06\" Class=\"R\">\r\n            <ServicingCarrier>AF</ServicingCarrier>\r\n            <ServicingCarrierName>AIR FRANCE</ServicingCarrierName>\r\n            <OpratingCarrierName/>\r\n            <FlightNo>1652</FlightNo>\r\n            <SeatNumber/>\r\n            <FlightDurationTime>0305</FlightDurationTime>\r\n            <GeographicalMileage>01245</GeographicalMileage>\r\n            <Meal>MS</Meal>\r\n            <MealSSR/>\r\n            <AirClass>R</AirClass>\r\n            <Departure Date=\"2015-04-22\" Time=\"19:45:00\"/>\r\n            <Arrival Date=\"2015-04-22\" Time=\"23:50:00\"/>\r\n            <Board City=\"PARIS/CHARLES\" Point=\"CDG\" Terminal=\"2E\"/>\r\n            <Off City=\"KIEV/BORYSPIL\" Point=\"KBP\" Terminal=\"\"/>\r\n            <FareBasis>RSR4UA</FareBasis>\r\n            <BaggageAllowance>1PC</BaggageAllowance>\r\n            <Equipment>319</Equipment>\r\n            <WCHR/>\r\n            <ACRecLoc/>\r\n        </AirSegment>\r\n    </AirSegments>\r\n    <XP></XP></Ticket>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/v1/flight/endpoint",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"flight",
+						"endpoint"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
